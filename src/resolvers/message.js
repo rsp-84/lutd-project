@@ -7,7 +7,7 @@ export default {
             return await models.Message.findAll();
         },
         message: async (parent, { id }, { models }) => {
-            return await models.Message.findById(id);
+            return await models.Message.findByPk(id);
         },
     },
 
@@ -33,7 +33,7 @@ export default {
 
     Message: {
         user: async (message, args, { models }) => {
-            return await models.User.findById(message.userId);
+            return await models.User.findByPk(message.userId);
         },
     },
 };

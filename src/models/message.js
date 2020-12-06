@@ -7,7 +7,6 @@ const message = (sequelize, DataTypes) => {
                     args: true,
                     msg: 'A message has to have a text.',
                 },
-                len: [2,10]
             },
         },
     });
